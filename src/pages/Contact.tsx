@@ -190,7 +190,7 @@ const Contact = () => {
                   <p className="text-white/90 mb-4">
                     For urgent inquiries or emergency orders, call our 24/7 hotline.
                   </p>
-                  <Button variant="outline" className="w-full text-white border-white hover:bg-white/10">
+                  <Button variant="outline" className="w-full text-white border-white bg-white/10">
                     Call Now: +1 (555) 911-2222
                   </Button>
                 </CardContent>
