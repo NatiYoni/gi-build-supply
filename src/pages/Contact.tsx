@@ -157,11 +157,11 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Address</h3>
-                        <p className="text-muted-foreground">
+                        {/* <p className="text-muted-foreground">
                           123 Construction Avenue<br />
                           Builder City, BC 12345<br />
                           United States
-                        </p>
+                        </p> */}
                       </div>
                     </div>
 

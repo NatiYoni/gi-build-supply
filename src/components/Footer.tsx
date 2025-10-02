@@ -11,9 +11,9 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img 
-                src={logobgrem} 
-                alt="GI Technology Logo" 
+              <img
+                src={logobgrem}
+                alt="GI Technology Logo"
                 className="h-10 w-10 object-contain"
               />
               <h3 className="text-lg font-bold">GI Technology</h3>
@@ -74,8 +74,8 @@ const Footer = () => {
                 <span>Gizzetechnology21@gmail.com</span>
               </li>
               <li className="flex items-start gap-2 text-sm text-primary-foreground/80">
-                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>123 Construction Ave, Builder City, BC 12345</span>
+                {/* <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" /> */}
+                {/* <span>123 Construction Ave, Builder City, BC 12345</span> */}
               </li>
             </ul>
           </div>
