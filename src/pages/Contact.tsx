@@ -137,8 +137,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Phone</h3>
-                        <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                        <p className="text-muted-foreground">+1 (555) 987-6543</p>
+                        <p className="text-muted-foreground">+251911711111</p>
                       </div>
                     </div>
 
@@ -148,8 +147,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Email</h3>
-                        <p className="text-muted-foreground">info@gitechnologies.com</p>
-                        <p className="text-muted-foreground">sales@gitechnologies.com</p>
+                        <p className="text-muted-foreground">+251911711111</p>
                       </div>
                     </div>
 
@@ -191,7 +189,7 @@ const Contact = () => {
                     For urgent inquiries or emergency orders, call our 24/7 hotline.
                   </p>
                   <Button variant="outline" className="w-full text-white border-white bg-white/10">
-                    Call Now: +1 (555) 911-2222
+                    Call Now: +251911711111
                   </Button>
                 </CardContent>
               </Card>

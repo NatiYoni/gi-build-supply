@@ -36,7 +36,7 @@ const About = () => {
       {/* Hero Section */}
       <section className="gradient-hero text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-white mb-6">About GI TECHNOLOGIES</h1>
+          <h1 className="text-white mb-6">About GI Technology</h1>
           <p className="text-xl max-w-3xl mx-auto text-white/90">
             Building Excellence Since Day One
           </p>
@@ -51,7 +51,7 @@ const About = () => {
               <h2 className="mb-6">Our Story</h2>
               <div className="space-y-4 text-muted-foreground text-lg">
                 <p>
-                  GI TECHNOLOGIES was founded with a simple mission: to provide the construction 
+                  GI Technology was founded with a simple mission: to provide the construction 
                   industry with the highest quality materials and most reliable service available. 
                   What started as a small operation has grown into a trusted partner for contractors 
                   and builders across the region.
@@ -62,7 +62,7 @@ const About = () => {
                   reliability, and customer service that goes above and beyond.
                 </p>
                 <p>
-                  Today, GI TECHNOLOGIES stands as a leader in construction material supply, 
+                  Today, GI Technology stands as a leader in construction material supply, 
                   offering everything from premium sand and gravel to complete building supplies. 
                   Our commitment to excellence remains unchanged, and we continue to grow alongside 
                   our customers' success.
@@ -75,7 +75,7 @@ const About = () => {
                 <div className="absolute inset-0 gradient-primary blur-3xl opacity-30 rounded-full"></div>
                 <img 
                   src={logo} 
-                  alt="GI TECHNOLOGIES Logo" 
+                  alt="GI Technology Logo" 
                   className="relative h-80 w-80 object-contain"
                 />
               </div>
@@ -153,7 +153,7 @@ const About = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="mb-6">Our Team</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-            Behind GI TECHNOLOGIES is a dedicated team of professionals committed to your success. 
+            Behind GI Technology is a dedicated team of professionals committed to your success. 
             From our experienced sales staff to our skilled logistics team, every member plays a 
             crucial role in delivering the quality and service you deserve.
           </p>

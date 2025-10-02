@@ -70,7 +70,7 @@ const Home = () => {
               Building Your Dreams with Premium Materials
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-              GI TECHNOLOGIES delivers top-quality construction sand, stones, and aggregates 
+              GI Technology delivers top-quality construction sand, stones, and aggregates 
               to power your building projects.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -94,7 +94,7 @@ const Home = () => {
       <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="mb-4">Why Choose GI TECHNOLOGIES?</h2>
+            <h2 className="mb-4">Why Choose GI Technology?</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               We provide exceptional service and quality materials for all your construction needs
             </p>
@@ -164,7 +164,7 @@ const Home = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-white mb-6">Ready to Start Your Project?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
-            Contact us today for a free quote and discover how GI TECHNOLOGIES can help bring your construction vision to life.
+            Contact us today for a free quote and discover how GI Technology can help bring your construction vision to life.
           </p>
           <Link to="/contact">
             <Button size="lg" variant="outline" className="text-black border-white hover:bg-white/10 text-lg px-8 py-6">

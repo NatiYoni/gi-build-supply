@@ -13,10 +13,10 @@ const Footer = () => {
             <div className="flex items-center gap-3">
               <img 
                 src={logobgrem} 
-                alt="GI TECHNOLOGIES Logo" 
+                alt="GI Technology Logo" 
                 className="h-10 w-10 object-contain"
               />
-              <h3 className="text-lg font-bold">GI TECHNOLOGIES</h3>
+              <h3 className="text-lg font-bold">GI Technology</h3>
             </div>
             <p className="text-sm text-primary-foreground/80">
               Premium construction materials and reliable service for all your building needs.
@@ -67,11 +67,11 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-primary-foreground/80">
                 <Phone className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>+1 (555) 123-4567</span>
+                <span>+251911711111</span>
               </li>
               <li className="flex items-start gap-2 text-sm text-primary-foreground/80">
                 <Mail className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>info@gitechnologies.com</span>
+                <span>Gizzetechnology21@gmail.com</span>
               </li>
               <li className="flex items-start gap-2 text-sm text-primary-foreground/80">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
@@ -82,7 +82,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/80">
-          <p>&copy; {new Date().getFullYear()} GI TECHNOLOGIES. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} GI Technology. All rights reserved.</p>
           <Link to="/privacy-policy" className="hover:text-primary-foreground transition-colors">
             Privacy Policy
           </Link>

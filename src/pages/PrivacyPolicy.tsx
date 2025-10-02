@@ -50,7 +50,7 @@ const PrivacyPolicy = () => {
                 </li>
                 <li>
                   <strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this 
-                  Agreement) refers to GI TECHNOLOGIES, 123 Construction Avenue, Builder City, BC 12345.
+                  Agreement) refers to GI Technology, 123 Construction Avenue, Builder City, BC 12345.
                 </li>
                 <li>
                   <strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any 
@@ -76,7 +76,7 @@ const PrivacyPolicy = () => {
                   behalf of the Company.
                 </li>
                 <li>
-                  <strong>Website</strong> refers to GI TECHNOLOGIES, accessible from gitechnologies.com
+                  <strong>Website</strong> refers to GI Technology, accessible from gitechnologies.com
                 </li>
                 <li>
                   <strong>You</strong> means the individual accessing or using the Service, or the company, or 
@@ -147,8 +147,8 @@ const PrivacyPolicy = () => {
                 If you have any questions about this Privacy Policy, You can contact us:
               </p>
               <ul className="space-y-2 text-muted-foreground">
-                <li>By email: info@gitechnologies.com</li>
-                <li>By phone: +1 (555) 123-4567</li>
+                <li>By email: Gizzetechnology21@gmail.com</li>
+                <li>By phone: +251911711111</li>
                 <li>By mail: 123 Construction Avenue, Builder City, BC 12345</li>
               </ul>
             </CardContent>
