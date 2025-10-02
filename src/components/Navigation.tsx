@@ -24,11 +24,11 @@ const Navigation = () => {
           <Link to="/" className="flex items-center gap-3 group">
             <img 
               src={logobgrem} 
-              alt="GI TECHNOLOGIES Logo" 
+              alt="GI Technology Logo" 
               className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110"
             />
             <div>
-              <h1 className="text-xl font-bold gradient-text">GI TECHNOLOGIES</h1>
+              <h1 className="text-xl font-bold gradient-text">GI Technology</h1>
               <p className="text-xs text-muted-foreground">Building Excellence</p>
             </div>
           </Link>

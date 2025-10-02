@@ -1,73 +1,73 @@
-# Welcome to your Lovable project
+# 🏗️ GI Technology – Construction Materials & Machinery
 
-## Project info
+## 🌐 Project Info
+**GI Technology** is a trusted supplier of **construction materials** such as **sand, gravel, and aggregates**.  
+We are also expanding into **construction machinery and heavy equipment**, making us a one-stop solution for builders, contractors, and individuals.  
 
-**URL**: https://lovable.dev/projects/b4e1c533-2b06-4836-a037-2f22b9ca1bd0
+Our mission is to deliver **reliable, high-quality, and affordable materials** that power successful construction projects.  
 
-## How can I edit this code?
+This website is being developed to represent the company’s products and services online.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 👨‍💻 Developers
+This project is being developed by:  
+- **Natnael Yonas**  
+- **Milkias Hailu**  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b4e1c533-2b06-4836-a037-2f22b9ca1bd0) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## ⚡ Website Features
+- 🏠 **Homepage** – Highlights our company vision and services  
+- 📦 **Products Page** – Browse available construction materials (sand, gravel, aggregates, etc.)  
+- 🛠️ **Machinery Section** – Coming soon: heavy equipment and tools  
+- 📞 **Contact Page** – Easy access to quotes and customer support  
+- 📱 **Responsive Design** – Optimized for mobile and desktop  
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## 🚀 Getting Started (Development)
+To run the project locally:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Step 1: Clone the repository
+git clone <YOUR_REPO_URL>
 
-# Step 2: Navigate to the project directory.
+# Step 2: Navigate into the project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Step 3: Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Your site will be available at:  
+👉 `http://localhost:5173/` (default for Vite)  
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🛠️ Technologies Used
+- **React** – Modern frontend framework  
+- **TypeScript** – Type-safe development  
+- **Vite** – Fast dev server & build tool  
+- **Tailwind CSS** – Utility-first styling  
+- **shadcn/ui** – Pre-built UI components  
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 🌍 Deployment
+You can deploy GI Technology’s website using:  
+- **Vercel**  
+- **Netlify**  
+- **Render**  
+- Or your own hosting / server  
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/b4e1c533-2b06-4836-a037-2f22b9ca1bd0) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 📞 Contact – GI Technology
+For inquiries and orders:  
+- **Phone:** +251911711111
+- **Email:** Gizzetechnology21@gmail.com  
+- **Office Address:** [office location]  
