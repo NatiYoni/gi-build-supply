@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
 import logo from "@/assets/logo.jpg";
+import logobgrem from "@/assets/logobgrem.png";
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img 
-                src={logo} 
+                src={logobgrem} 
                 alt="GI TECHNOLOGIES Logo" 
                 className="h-10 w-10 object-contain"
               />

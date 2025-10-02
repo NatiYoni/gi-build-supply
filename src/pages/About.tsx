@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Eye, Users, TrendingUp } from "lucide-react";
 import logo from "@/assets/logo.jpg";
+import logobgrem from "@/assets/logobgrem.png";
 
 const About = () => {
   const values = [

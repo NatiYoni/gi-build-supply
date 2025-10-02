@@ -2,8 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/logo.jpg";
-
+import logobgrem from "@/assets/logobgrem.png";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -24,7 +23,7 @@ const Navigation = () => {
           {/* Logo and Brand */}
           <Link to="/" className="flex items-center gap-3 group">
             <img 
-              src={logo} 
+              src={logobgrem} 
               alt="GI TECHNOLOGIES Logo" 
               className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110"
             />

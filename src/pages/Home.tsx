@@ -81,7 +81,7 @@ const Home = () => {
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10 text-lg px-8 py-6">
+                <Button size="lg" variant="outline" className="text-white border-white bg-white/10 text-lg px-8 py-6">
                   Get a Quote
                 </Button>
               </Link>
@@ -167,7 +167,7 @@ const Home = () => {
             Contact us today for a free quote and discover how GI TECHNOLOGIES can help bring your construction vision to life.
           </p>
           <Link to="/contact">
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10 text-lg px-8 py-6">
+            <Button size="lg" variant="outline" className="text-black border-white hover:bg-white/10 text-lg px-8 py-6">
               Contact Us Today
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
