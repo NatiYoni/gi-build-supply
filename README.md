@@ -10,13 +10,6 @@ This website is being developed to represent the company’s products and servic
 
 ---
 
-## 👨‍💻 Developers
-This project is being developed by:  
-- **Natnael Yonas**  
-- **Milkias Hailu**  
-
----
-
 ## ⚡ Website Features
 - 🏠 **Homepage** – Highlights our company vision and services  
 - 📦 **Products Page** – Browse available construction materials (sand, gravel, aggregates, etc.)  
@@ -107,3 +100,10 @@ For inquiries and orders:
 - **Phone:** +251911711111
 - **Email:** Gizzetechnology21@gmail.com  
 - **Office Address:** [office location]  
+
+---
+
+## 👨‍💻 Developers
+This project is being developed by:  
+- **Natnael Yonas**  
+- **Milkias Hailu**  
