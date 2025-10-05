@@ -106,4 +106,4 @@ For inquiries and orders:
 ## 👨‍💻 Developers
 This project is being developed by:  
 - **Natnael Yonas**  
-- **Milkias Hailu**  
+- **Milkiyas Hailu**  
