@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Eye, Users, TrendingUp } from "lucide-react";
-import logo from "@/assets/logo.jpg";
+// import logo from "@/assets/logo.jpg";
 import logobgrem from "@/assets/logobgrem.png";
 
 const About = () => {
@@ -74,7 +74,7 @@ const About = () => {
               <div className="relative">
                 <div className="absolute inset-0 gradient-primary blur-3xl opacity-30 rounded-full"></div>
                 <img 
-                  src={logo} 
+                  src={logobgrem} 
                   alt="GI Technology Logo" 
                   className="relative h-80 w-80 object-contain"
                 />
