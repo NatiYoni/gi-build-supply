@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ArrowRight, CheckCircle, Truck, Clock, Award } from "lucide-react";
-import heroImage from "@/assets/hero-construction.jpg";
+import heroImage from "@/assets/home.png";
 import sandProduct from "@/assets/sand-product.jpg";
 import stonesProduct from "@/assets/stones-product.jpg";
 import constructionMaterials from "@/assets/construction-materials.jpg";
