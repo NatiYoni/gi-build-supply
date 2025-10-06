@@ -4,23 +4,26 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import sandProduct from "@/assets/sand-product.jpg";
-import stonesProduct from "@/assets/stones-product.jpg";
+import sandDark from "@/assets/sand-dark.jpg";
+import sandPile from "@/assets/sand-pile.jpg";
+import sandLight from "@/assets/sand-light.jpg";
+import gravelConveyor from "@/assets/gravel-conveyor.jpg";
+import gravelSystem from "@/assets/gravel-system.jpg";
 import gravelPile from "@/assets/gravel-pile.jpg";
 import gravelFine from "@/assets/gravel-fine.jpg";
-import machinerySand from "@/assets/machinery-sand.jpg";
-import machineryLoader from "@/assets/machinery-loader.jpg";
 import cementPowder from "@/assets/cement-powder.jpg";
-import machineryGroup from "@/assets/machinery-group.jpg";
-import machineryDuo from "@/assets/machinery-duo.jpg";
-import machineryFleet from "@/assets/machinery-fleet.jpg";
+import equipmentTypes from "@/assets/equipment-types.jpg";
+import loaderSand from "@/assets/loader-sand.jpg";
+import excavatorQuarry from "@/assets/excavator-quarry.jpg";
+import excavatorWork from "@/assets/excavator-work.jpg";
+import excavatorSunset from "@/assets/excavator-sunset.jpg";
 import { CheckCircle, ArrowRight, Clock } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       title: "Construction Sand",
-      images: [sandProduct, machinerySand],
+      images: [sandDark, sandPile, sandLight],
       description: "Premium quality sand in various types perfect for all construction projects, from residential to commercial builds.",
       features: [
         "Fine grain sand for masonry work",
@@ -33,7 +36,7 @@ const Services = () => {
     },
     {
       title: "Gravel & Aggregates",
-      images: [stonesProduct, gravelPile, gravelFine],
+      images: [gravelConveyor, gravelSystem, gravelPile, gravelFine],
       description: "High-quality gravel and aggregates in various sizes and types for different construction applications.",
       features: [
         "Multiple size options (3/8\", 3/4\", 1.5\")",
@@ -59,7 +62,7 @@ const Services = () => {
     },
     {
       title: "Construction Machinery",
-      images: [machineryGroup, machineryDuo, machineryFleet, machineryLoader],
+      images: [equipmentTypes, loaderSand, excavatorQuarry, excavatorWork, excavatorSunset],
       description: "Modern construction equipment and machinery for efficient project execution.",
       features: [
         "Excavators and loaders",
@@ -99,18 +102,21 @@ const Services = () => {
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                   {service.images.length === 1 ? (
-                    <div className="relative h-96 rounded-lg overflow-hidden shadow-card">
+                    <div className="relative h-96 rounded-lg overflow-hidden shadow-card group">
                       <img 
                         src={service.images[0]} 
                         alt={service.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                       {service.comingSoon && (
-                        <div className="absolute inset-0 bg-primary/60 backdrop-blur-sm flex items-center justify-center">
-                          <Badge className="text-lg px-6 py-3 bg-white text-primary">
-                            <Clock className="mr-2 h-5 w-5" />
-                            Coming Soon
-                          </Badge>
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-accent/70 to-primary/80 backdrop-blur-sm flex items-center justify-center animate-pulse">
+                          <div className="text-center space-y-4">
+                            <Badge className="text-xl px-8 py-4 bg-white text-primary shadow-glow animate-bounce">
+                              <Clock className="mr-2 h-6 w-6" />
+                              Coming Soon
+                            </Badge>
+                            <p className="text-white text-lg font-semibold">Available Soon!</p>
+                          </div>
                         </div>
                       )}
                     </div>
@@ -119,23 +125,28 @@ const Services = () => {
                       {service.images.map((image, imgIndex) => (
                         <div 
                           key={imgIndex} 
-                          className={`relative rounded-lg overflow-hidden shadow-card ${
+                          className={`relative rounded-lg overflow-hidden shadow-card group ${
                             imgIndex === 0 && service.images.length === 3 ? "col-span-2 h-64" : "h-48"
                           } ${
                             service.images.length === 4 ? "h-44" : ""
+                          } ${
+                            service.images.length === 5 && imgIndex === 0 ? "col-span-2 h-64" : ""
                           }`}
                         >
                           <img 
                             src={image} 
                             alt={`${service.title} ${imgIndex + 1}`}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                           />
                           {service.comingSoon && imgIndex === 0 && (
-                            <div className="absolute inset-0 bg-primary/60 backdrop-blur-sm flex items-center justify-center">
-                              <Badge className="text-base px-4 py-2 bg-white text-primary">
-                                <Clock className="mr-2 h-4 w-4" />
-                                Coming Soon
-                              </Badge>
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-accent/70 to-primary/80 backdrop-blur-sm flex items-center justify-center animate-pulse">
+                              <div className="text-center space-y-2">
+                                <Badge className="text-lg px-6 py-3 bg-white text-primary shadow-glow animate-bounce">
+                                  <Clock className="mr-2 h-5 w-5" />
+                                  Coming Soon
+                                </Badge>
+                                <p className="text-white font-semibold">Available Soon!</p>
+                              </div>
                             </div>
                           )}
                         </div>

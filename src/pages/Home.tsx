@@ -5,9 +5,9 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ArrowRight, CheckCircle, Truck, Clock, Award } from "lucide-react";
 import heroImage from "@/assets/home.png";
-import sandProduct from "@/assets/sand-product.jpg";
-import stonesProduct from "@/assets/stones-product.jpg";
-import constructionMaterials from "@/assets/construction-materials.jpg";
+import sandDark from "@/assets/sand-dark.jpg";
+import gravelConveyor from "@/assets/gravel-conveyor.jpg";
+import loaderSand from "@/assets/loader-sand.jpg";
 
 const Home = () => {
   const features = [
@@ -36,18 +36,18 @@ const Home = () => {
   const products = [
     {
       name: "Construction Sand",
-      image: sandProduct,
+      image: sandDark,
       description: "High-quality sand for all construction needs",
     },
     {
       name: "Gravel & Stones",
-      image: stonesProduct,
+      image: gravelConveyor,
       description: "Various sizes of premium aggregates",
     },
     {
-      name: "Building Materials",
-      image: constructionMaterials,
-      description: "Complete range of construction supplies",
+      name: "Construction Machinery",
+      image: loaderSand,
+      description: "Modern equipment for efficient projects",
     },
   ];
 
@@ -56,13 +56,13 @@ const Home = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-transparent"></div>
-        </div>
+      <section className="relative h-[90vh] flex items-center overflow-hidden">
+        <img 
+          src={heroImage} 
+          alt="GI Technology Construction Materials"
+          className="absolute inset-0 w-full h-full object-contain object-center bg-gradient-to-r from-primary/20 to-primary/10"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/50 to-transparent"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
