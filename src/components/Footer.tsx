@@ -73,9 +73,11 @@ const Footer = () => {
                 <Mail className="h-4 w-4 mt-0.5 flex-shrink-0" />
                 <span>Gizzetechnology21@gmail.com</span>
               </li>
-              <li className="flex items-start gap-2 text-sm text-primary-foreground/80">
-                {/* <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" /> */}
-                {/* <span>123 Construction Ave, Builder City, BC 12345</span> */}
+              <li className="text-sm text-primary-foreground/80 font-medium mt-4">
+                Open: Monday - Sunday
+              </li>
+              <li className="text-sm text-primary-foreground/80">
+                6:00 AM - 8:00 PM
               </li>
             </ul>
           </div>

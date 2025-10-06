@@ -1,47 +1,74 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import sandProduct from "@/assets/sand-product.jpg";
 import stonesProduct from "@/assets/stones-product.jpg";
-import constructionMaterials from "@/assets/construction-materials.jpg";
-import { CheckCircle, ArrowRight } from "lucide-react";
+import gravelPile from "@/assets/gravel-pile.jpg";
+import gravelFine from "@/assets/gravel-fine.jpg";
+import machinerySand from "@/assets/machinery-sand.jpg";
+import machineryLoader from "@/assets/machinery-loader.jpg";
+import cementPowder from "@/assets/cement-powder.jpg";
+import machineryGroup from "@/assets/machinery-group.jpg";
+import machineryDuo from "@/assets/machinery-duo.jpg";
+import machineryFleet from "@/assets/machinery-fleet.jpg";
+import { CheckCircle, ArrowRight, Clock } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       title: "Construction Sand",
-      image: sandProduct,
-      description: "Premium quality sand perfect for all types of construction projects, from residential to commercial builds.",
+      images: [sandProduct, machinerySand],
+      description: "Premium quality sand in various types perfect for all construction projects, from residential to commercial builds.",
       features: [
         "Fine grain sand for masonry work",
         "Coarse sand for concrete mixing",
+        "River sand for plastering",
         "Washed and screened for purity",
         "Available in bulk quantities",
       ],
+      comingSoon: false,
     },
     {
       title: "Gravel & Aggregates",
-      image: stonesProduct,
-      description: "High-quality gravel and aggregates in various sizes for different construction applications.",
+      images: [stonesProduct, gravelPile, gravelFine],
+      description: "High-quality gravel and aggregates in various sizes and types for different construction applications.",
       features: [
         "Multiple size options (3/8\", 3/4\", 1.5\")",
         "Crushed stone for base material",
         "Decorative gravel options",
+        "Fine and coarse aggregates",
         "Drainage and landscaping aggregates",
       ],
+      comingSoon: false,
     },
     {
-      title: "Building Materials",
-      image: constructionMaterials,
-      description: "Complete range of construction materials and supplies to meet all your building requirements.",
+      title: "Cement & Building Materials",
+      images: [cementPowder],
+      description: "Quality cement and construction materials to meet your building requirements.",
       features: [
-        "Cement and concrete products",
+        "Portland cement",
+        "Rapid-setting cement",
         "Construction adhesives",
-        "Reinforcement materials",
-        "Custom material orders available",
+        "Various cement grades",
+        "Bulk orders available",
       ],
+      comingSoon: true,
+    },
+    {
+      title: "Construction Machinery",
+      images: [machineryGroup, machineryDuo, machineryFleet, machineryLoader],
+      description: "Modern construction equipment and machinery for efficient project execution.",
+      features: [
+        "Excavators and loaders",
+        "Dump trucks",
+        "Backhoe loaders",
+        "Professional operators available",
+        "Flexible rental periods",
+      ],
+      comingSoon: true,
     },
   ];
 
@@ -66,23 +93,68 @@ const Services = () => {
             {services.map((service, index) => (
               <div 
                 key={index} 
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center ${
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-start ${
                   index % 2 === 1 ? "lg:flex-row-reverse" : ""
                 }`}
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                  <div className="relative h-96 rounded-lg overflow-hidden shadow-card">
-                    <img 
-                      src={service.image} 
-                      alt={service.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  {service.images.length === 1 ? (
+                    <div className="relative h-96 rounded-lg overflow-hidden shadow-card">
+                      <img 
+                        src={service.images[0]} 
+                        alt={service.title}
+                        className="w-full h-full object-cover"
+                      />
+                      {service.comingSoon && (
+                        <div className="absolute inset-0 bg-primary/60 backdrop-blur-sm flex items-center justify-center">
+                          <Badge className="text-lg px-6 py-3 bg-white text-primary">
+                            <Clock className="mr-2 h-5 w-5" />
+                            Coming Soon
+                          </Badge>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="grid grid-cols-2 gap-4">
+                      {service.images.map((image, imgIndex) => (
+                        <div 
+                          key={imgIndex} 
+                          className={`relative rounded-lg overflow-hidden shadow-card ${
+                            imgIndex === 0 && service.images.length === 3 ? "col-span-2 h-64" : "h-48"
+                          } ${
+                            service.images.length === 4 ? "h-44" : ""
+                          }`}
+                        >
+                          <img 
+                            src={image} 
+                            alt={`${service.title} ${imgIndex + 1}`}
+                            className="w-full h-full object-cover"
+                          />
+                          {service.comingSoon && imgIndex === 0 && (
+                            <div className="absolute inset-0 bg-primary/60 backdrop-blur-sm flex items-center justify-center">
+                              <Badge className="text-base px-4 py-2 bg-white text-primary">
+                                <Clock className="mr-2 h-4 w-4" />
+                                Coming Soon
+                              </Badge>
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
                 
                 <Card className={`shadow-card ${index % 2 === 1 ? "lg:order-1" : ""}`}>
                   <CardHeader>
-                    <CardTitle className="text-3xl gradient-text">{service.title}</CardTitle>
+                    <div className="flex items-center justify-between">
+                      <CardTitle className="text-3xl gradient-text">{service.title}</CardTitle>
+                      {service.comingSoon && (
+                        <Badge variant="outline" className="text-accent border-accent">
+                          <Clock className="mr-1 h-3 w-3" />
+                          Coming Soon
+                        </Badge>
+                      )}
+                    </div>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <p className="text-muted-foreground text-lg">{service.description}</p>
@@ -97,8 +169,11 @@ const Services = () => {
                     </ul>
 
                     <Link to="/contact">
-                      <Button className="gradient-hero text-white shadow-glow mt-4">
-                        Request Quote
+                      <Button 
+                        className="gradient-hero text-white shadow-glow mt-4"
+                        disabled={service.comingSoon}
+                      >
+                        {service.comingSoon ? "Notify Me" : "Request Quote"}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
