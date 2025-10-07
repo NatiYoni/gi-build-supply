@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ArrowRight, CheckCircle, Truck, Clock, Award } from "lucide-react";
 import heroImage from "@/assets/home.png";
+import hero from "@/assets/hero.jpg"
 import sandDark from "@/assets/sand-dark.jpg";
 import gravelConveyor from "@/assets/gravel-conveyor.jpg";
 import loaderSand from "@/assets/loader-sand.jpg";
@@ -57,20 +58,20 @@ const Home = () => {
 
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center overflow-hidden">
-        <img 
-          src={heroImage} 
+        <img
+          src={hero}
           alt="GI Technology Construction Materials"
           className="absolute inset-0 w-full h-full object-contain object-center bg-gradient-to-r from-primary/20 to-primary/10"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/50 to-transparent"></div>
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-white mb-6">
               Building Your Dreams with Premium Materials
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-              GI Technology delivers top-quality construction sand, stones, and aggregates 
+              GI Technology delivers top-quality construction sand, stones, and aggregates
               to power your building projects.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -133,8 +134,8 @@ const Home = () => {
             {products.map((product, index) => (
               <Card key={index} className="overflow-hidden shadow-card hover:shadow-glow transition-all duration-300 group">
                 <div className="relative h-64 overflow-hidden">
-                  <img 
-                    src={product.image} 
+                  <img
+                    src={product.image}
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
