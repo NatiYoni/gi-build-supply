@@ -4,6 +4,7 @@
 // Usage: import PrivacyPolicy from './PrivacyPolicy';
 // Then render <PrivacyPolicy /> in your app.
 
+import Navigation from "@/components/Navigation";
 import React from "react";
 
 export default function PrivacyPolicy(): JSX.Element {
@@ -507,48 +508,52 @@ By visiting this page on our website: [WEBSITE_CONTACT_PAGE_URL]
 By sending us an email: [WEBSITE_CONTACT_EMAIL]`;
 
   return (
-    <article
-      aria-label="Privacy Policy"
-      style={{
-        maxWidth: 980,
-        margin: "32px auto",
-        padding: 24,
-        fontFamily:
-          '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial',
-        lineHeight: 1.6,
-        color: "#111827",
-        background: "#ffffff",
-        borderRadius: 8,
-        boxShadow:
-          "0 1px 2px rgba(0,0,0,0.05), 0 4px 12px rgba(0,0,0,0.04)",
-      }}
-    >
-      <header style={{ marginBottom: 18 }}>
-        <h1 style={{ fontSize: 28, margin: 0 }}>Privacy Policy</h1>
-        <p style={{ marginTop: 8, color: "#6b7280" }}>
-          This page contains the full privacy policy text.
-        </p>
-      </header>
+    <>
+      <Navigation />
 
-      {/* Render the exact policy text inside a preformatted block to preserve lines */}
-      <section>
-        <pre
-          style={{
-            whiteSpace: "pre-wrap",
-            fontFamily:
-              'ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", monospace',
-            fontSize: 14,
-            margin: 0,
-            padding: 12,
-            background: "#f9fafb",
-            borderRadius: 6,
-            overflowX: "auto",
-            border: "1px solid #e6e9ee",
-          }}
-        >
-          {policyText}
-        </pre>
-      </section>
-    </article>
+      <article
+        aria-label="Privacy Policy"
+        style={{
+          maxWidth: 980,
+          margin: "32px auto",
+          padding: 24,
+          fontFamily:
+            '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial',
+          lineHeight: 1.6,
+          color: "#111827",
+          background: "#ffffff",
+          borderRadius: 8,
+          boxShadow:
+            "0 1px 2px rgba(0,0,0,0.05), 0 4px 12px rgba(0,0,0,0.04)",
+        }}
+      >
+        <header style={{ marginBottom: 18 }}>
+          <h1 style={{ fontSize: 28, margin: 0 }}>Privacy Policy</h1>
+          <p style={{ marginTop: 8, color: "#6b7280" }}>
+            This page contains the full privacy policy text.
+          </p>
+        </header>
+
+        {/* Render the exact policy text inside a preformatted block to preserve lines */}
+        <section>
+          <pre
+            style={{
+              whiteSpace: "pre-wrap",
+              fontFamily:
+                'ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", monospace',
+              fontSize: 14,
+              margin: 0,
+              padding: 12,
+              background: "#f9fafb",
+              borderRadius: 6,
+              overflowX: "auto",
+              border: "1px solid #e6e9ee",
+            }}
+          >
+            {policyText}
+          </pre>
+        </section>
+      </article>
+    </>
   );
 }
