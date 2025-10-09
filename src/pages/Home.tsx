@@ -57,35 +57,45 @@ const Home = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center overflow-hidden">
+      <section className="relative py-20 md:py-20">
+        {/* Mobile-only background image and overlay */}
         <img
           src={hero}
           alt="GI Technology Construction Materials"
-          className="absolute inset-0 w-full h-full object-contain object-center bg-gradient-to-r from-primary/20 to-primary/10"
+          className="absolute inset-0 w-full h-full object-cover md:hidden"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/20 md:hidden"></div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-white mb-6">
-              Building Your Dreams with Premium Materials
-            </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-              GI Technology delivers top-quality construction sand, stones, and aggregates
-              to power your building projects.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link to="/services">
-                <Button size="lg" className="gradient-hero text-white shadow-glow text-lg px-8 py-6">
-                  Explore Products
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="text-white border-white bg-white/10 text-lg px-8 py-6">
-                  Get a Quote
-                </Button>
-              </Link>
+        <div className="container mx-auto px-4 relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="max-w-3xl relative z-10">
+              <h1 className="mb-6 text-white md:text-foreground">
+                Building Your Dreams with Premium Materials
+              </h1>
+              <p className="text-xl md:text-2xl text-white/90 md:text-muted-foreground mb-8 leading-relaxed">
+                GI Technology delivers top-quality construction sand, stones, and aggregates
+                to power your building projects.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link to="/services">
+                  <Button size="lg" className="gradient-hero text-white shadow-glow text-lg px-8 py-6">
+                    Explore Products
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button size="lg" variant="outline" className="text-white border-white bg-white/10 md:text-foreground md:border-input md:bg-transparent text-lg px-8 py-6">
+                    Get a Quote
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <div className="relative w-full hidden md:block">
+              <img
+                src={hero}
+                alt="GI Technology Construction Materials"
+                className="w-full h-auto max-h-[70vh] object-contain rounded-lg shadow-2xl"
+              />
             </div>
           </div>
         </div>
