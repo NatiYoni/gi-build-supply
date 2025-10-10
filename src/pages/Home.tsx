@@ -90,7 +90,9 @@ const Home = () => {
               </div>
               <div className="mt-8 flex items-center gap-3 text-slate-700">
                 <Phone className="h-5 w-5 text-primary" />
-                <span className="text-lg"> <strong>+251-911-711-111</strong></span>
+                <a href="tel:+251911711111" className="text-lg font-semibold hover:text-blue-600 hover:underline">
+                  +251 911 711 111
+                </a>
               </div>
             </div>
             {/* Image Content */}
@@ -132,7 +134,9 @@ const Home = () => {
               </div>
               <div className="mt-8 flex items-center gap-3 gradient-hero p-1.5 rounded-md">
                 <Phone className="h-5 w-5 text-white" />
-                <span className="text-lg"> <strong>+251-911-711-111</strong></span>
+                <a href="tel:+251911711111" className="text-lg font-semibold text-white hover:underline">
+                  +251 911 711 111
+                </a>
               </div>
 
             </div>
