@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ArrowRight, CheckCircle, Truck, Clock, Award, Phone} from "lucide-react";
+import { ArrowRight, CheckCircle, Truck, Clock, Award, Phone } from "lucide-react";
 import heroImage from "@/assets/hero.jpg";
 import sandDark from "@/assets/sand-dark.jpg";
 import gravelConveyor from "@/assets/gravel-conveyor.jpg";
@@ -59,8 +59,8 @@ const Home = () => {
       <section className="relative overflow-hidden bg-gradient-to-br from-purple-50/60 via-background to-blue-50/60 pb-20 md:pb-32">
         {/* Animated Gradient Blob - DESKTOP ONLY */}
         <div className="absolute top-0 left-0 w-full h-full opacity-80 hidden md:block">
-            <div className="absolute top-0 left-0 w-2/3 h-2/3 bg-purple-400/50 rounded-full filter blur-3xl animate-blob"></div>
-            <div className="absolute bottom-0 right-0 w-2/3 h-2/3 bg-blue-400/50 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
+          <div className="absolute top-0 left-0 w-2/3 h-2/3 bg-purple-400/50 rounded-full filter blur-3xl animate-blob"></div>
+          <div className="absolute bottom-0 right-0 w-2/3 h-2/3 bg-blue-400/50 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -130,16 +130,20 @@ const Home = () => {
                   </Button>
                 </Link>
               </div>
-              
+              <div className="mt-8 flex items-center gap-3 gradient-hero p-1.5 rounded-md">
+                <Phone className="h-5 w-5 text-white" />
+                <span className="text-lg"> <strong>+251-911-711-111</strong></span>
+              </div>
+
             </div>
           </div>
         </div>
-        
+
         {/* Shaped Divider */}
         <div className="absolute bottom-0 left-0 w-full leading-[0]">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" className="w-full h-auto">
-                <path fill="#F9FAFB" fillOpacity="1" d="M0,160L48,181.3C96,203,192,245,288,240C384,235,480,181,576,170.7C672,160,768,192,864,208C960,224,1056,224,1152,202.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-            </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" className="w-full h-auto">
+            <path fill="#F9FAFB" fillOpacity="1" d="M0,160L48,181.3C96,203,192,245,288,240C384,235,480,181,576,170.7C672,160,768,192,864,208C960,224,1056,224,1152,202.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg>
         </div>
       </section>
 
