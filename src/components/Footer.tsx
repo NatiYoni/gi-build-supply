@@ -67,11 +67,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-primary-foreground/80">
                 <Phone className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>+251 911 711 111</span>
+                <a href="tel:+251911711111" className="text-primary-foreground/80 hover:text-blue-600 hover:underline transition-colors">
+                  +251 911 711 111
+                </a>
               </li>
               <li className="flex items-start gap-2 text-sm text-primary-foreground/80">
                 <Mail className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>gizzetechnology21@gmail.com</span>
+                <a href="mailto:gizzetechnology21@gmail.com" className="text-primary-foreground/80 hover:text-blue-600 hover:underline transition-colors">
+                  gizzetechnology21@gmail.com
+                </a>
               </li>
               <li className="text-sm text-primary-foreground/80 font-medium mt-4">
                 Open: Monday - Sunday
