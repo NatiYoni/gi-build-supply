@@ -3,9 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ArrowRight, CheckCircle, Truck, Clock, Award } from "lucide-react";
-import heroImage from "@/assets/home.png";
-import hero from "@/assets/hero.jpg"
+import { ArrowRight, CheckCircle, Truck, Clock, Award, Phone} from "lucide-react";
+import heroImage from "@/assets/hero.jpg";
 import sandDark from "@/assets/sand-dark.jpg";
 import gravelConveyor from "@/assets/gravel-conveyor.jpg";
 import loaderSand from "@/assets/loader-sand.jpg";
@@ -57,26 +56,26 @@ const Home = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-20">
-        {/* Mobile-only background image and overlay */}
-        <img
-          src={hero}
-          alt="GI Technology Construction Materials"
-          className="absolute inset-0 w-full h-full object-cover md:hidden"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/20 md:hidden"></div>
+      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50/60 via-background to-blue-50/60 pb-20 md:pb-32">
+        {/* Animated Gradient Blob - DESKTOP ONLY */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-80 hidden md:block">
+            <div className="absolute top-0 left-0 w-2/3 h-2/3 bg-purple-400/50 rounded-full filter blur-3xl animate-blob"></div>
+            <div className="absolute bottom-0 right-0 w-2/3 h-2/3 bg-blue-400/50 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
+        </div>
 
-        <div className="container mx-auto px-4 relative">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="max-w-3xl relative z-10">
-              <h1 className="mb-6 text-white md:text-foreground">
+        <div className="container mx-auto px-4 relative z-10">
+          {/* --- Desktop Layout --- */}
+          <div className="hidden md:grid grid-cols-2 gap-16 items-center min-h-[80vh]">
+            {/* Text Content */}
+            <div className="max-w-3xl text-left animate-fade-in-left">
+              <h1 className="mb-6 text-foreground">
                 Building Your Dreams with Premium Materials
               </h1>
-              <p className="text-xl md:text-2xl text-white/90 md:text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
                 GI Technology delivers top-quality construction sand, stones, and aggregates
                 to power your building projects.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 justify-start">
                 <Link to="/services">
                   <Button size="lg" className="gradient-hero text-white shadow-glow text-lg px-8 py-6">
                     Explore Products
@@ -84,25 +83,68 @@ const Home = () => {
                   </Button>
                 </Link>
                 <Link to="/contact">
-                  <Button size="lg" variant="outline" className="text-white border-white bg-white/10 md:text-foreground md:border-input md:bg-transparent text-lg px-8 py-6">
+                  <Button size="lg" variant="outline" className="text-lg px-8 py-6">
                     Get a Quote
                   </Button>
                 </Link>
               </div>
+              <div className="mt-8 flex items-center gap-3 text-slate-700">
+                <Phone className="h-5 w-5 text-primary" />
+                <span className="text-lg"> <strong>+251-911-711-111</strong></span>
+              </div>
             </div>
-            <div className="relative w-full hidden md:block">
+            {/* Image Content */}
+            <div className="relative w-full h-full flex items-center justify-center animate-fade-in-right">
               <img
-                src={hero}
+                src={heroImage}
                 alt="GI Technology Construction Materials"
-                className="w-full h-auto max-h-[70vh] object-contain rounded-lg shadow-2xl"
+                className="max-w-full max-h-[60vh] object-contain rounded-lg [filter:drop-shadow(0_25px_30px_rgba(0,0,0,0.15))]"
               />
             </div>
           </div>
+
+          {/* --- Mobile Layout --- */}
+          <div className="md:hidden relative my-8 rounded-lg overflow-hidden shadow-xl">
+            <img
+              src={heroImage}
+              alt="GI Technology Construction Materials"
+              className="w-full h-auto"
+            />
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6 bg-gradient-to-t from-primary/80 to-primary/60 text-white">
+              <h1 className="mb-4 text-white text-4xl leading-tight">
+                Building Your Dreams with Premium Materials
+              </h1>
+              <p className="text-md text-white/90 mb-6">
+                Top-quality sand, stones, and aggregates for your projects.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-sm">
+                <Link to="/services" className="w-full">
+                  <Button size="lg" className="w-full gradient-hero text-white shadow-glow">
+                    Explore Products
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link to="/contact" className="w-full">
+                  <Button size="lg" variant="outline" className="w-full bg-white/10 border-white hover:bg-white/20">
+                    Get a Quote
+                  </Button>
+                </Link>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+        {/* Shaped Divider */}
+        <div className="absolute bottom-0 left-0 w-full leading-[0]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" className="w-full h-auto">
+                <path fill="#F9FAFB" fillOpacity="1" d="M0,160L48,181.3C96,203,192,245,288,240C384,235,480,181,576,170.7C672,160,768,192,864,208C960,224,1056,224,1152,202.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-subtle">
+      <section className="py-20 bg-[#F9FAFB]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="mb-4">Why Choose GI Technology?</h2>
@@ -115,7 +157,7 @@ const Home = () => {
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
-                <Card key={index} className="shadow-card hover:shadow-glow transition-shadow duration-300">
+                <Card key={index} className="shadow-card hover:shadow-glow transition-shadow duration-300 bg-white">
                   <CardContent className="pt-6 text-center">
                     <div className="inline-flex items-center justify-center w-16 h-16 rounded-full gradient-hero mb-4">
                       <Icon className="h-8 w-8 text-white" />
@@ -131,7 +173,7 @@ const Home = () => {
       </section>
 
       {/* Products Preview */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="mb-4">Our Products</h2>
@@ -142,7 +184,7 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {products.map((product, index) => (
-              <Card key={index} className="overflow-hidden shadow-card hover:shadow-glow transition-all duration-300 group">
+              <Card key={index} className="overflow-hidden shadow-card hover:shadow-glow transition-all duration-300 group bg-white">
                 <div className="relative h-64 overflow-hidden">
                   <img
                     src={product.image}
@@ -178,7 +220,7 @@ const Home = () => {
             Contact us today for a free quote and discover how GI Technology can help bring your construction vision to life.
           </p>
           <Link to="/contact">
-            <Button size="lg" variant="outline" className="text-black border-white hover:bg-white/10 text-lg px-8 py-6">
+            <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-white/90 border-white text-lg px-8 py-6">
               Contact Us Today
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>

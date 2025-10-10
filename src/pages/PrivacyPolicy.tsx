@@ -2,28 +2,32 @@ import React from 'react';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-// --- company Info ---
-const COMPANY_NAME = "Gize Technology PLC";
-const COMPANY_INFORMATION = "Gize Technology PLC, Addis Ababa, Ethiopia";
-const COMPANY_COUNTRY = "Ethiopia";
-const WEBSITE_NAME = "Gize Build Supply";
-const WEBSITE_URL = "https://www.gizebuildsupply.com"; // Replace with your actual URL
-const WEBSITE_CONTACT_PAGE_URL = "https://www.gizebuildsupply.com/contact"; // Replace with your actual URL
-const WEBSITE_CONTACT_EMAIL = "support@gizetechnology.com";
-const LAST_UPDATED_DATE = "October 9, 2025";
-// ---------------------------------------------
+// --- Define company information here for easy updates ---
+const companyInfo = {
+    name: "GI Technology",
+    email: "gizzetechnology21@gmail.com",
+    phone: "+251911711111", // Use a format without spaces for the tel link
+    displayPhone: "+251 911 711 111", // A display-friendly version
+    address: "Addis Ababa, Ethiopia",
+    governingLaw: "the laws of the Federal Democratic Republic of Ethiopia"
+};
 
-const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
-    <section className="mb-6">
-        <h2 className="text-2xl font-semibold mb-3">{title}</h2>
-        <div className="space-y-4 text-gray-700">{children}</div>
+const PolicySection: React.FC<{ title: string; effectiveDate: string; children: React.ReactNode }> = ({ title, effectiveDate, children }) => (
+    <section className="mb-12">
+        <header className="border-b pb-4 mb-6">
+            <h1 className="text-4xl font-bold text-gray-900">{title}</h1>
+            <p className="text-md text-gray-500 mt-1">Effective Date: {effectiveDate}</p>
+        </header>
+        <div className="prose prose-lg max-w-none space-y-6">
+            {children}
+        </div>
     </section>
 );
 
-const SubSection: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
-    <div className="mt-4">
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <div className="space-y-3">{children}</div>
+const PolicyPoint: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
+    <div>
+        <h2 className="text-2xl font-semibold mb-2">{title}</h2>
+        <div className="text-gray-700">{children}</div>
     </div>
 );
 
@@ -33,103 +37,67 @@ export default function PrivacyPolicy(): JSX.Element {
             <Navigation />
             <main className="min-h-screen bg-gray-50 text-gray-800 p-4 sm:p-8">
                 <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6 sm:p-10">
-                    <header className="border-b pb-4 mb-6">
-                        <h1 className="text-4xl font-bold text-gray-900">Privacy Policy</h1>
-                        <p className="text-md text-gray-500 mt-1">Last updated: {LAST_UPDATED_DATE}</p>
-                    </header>
+                    
+                    {/* --- Privacy Policy Section --- */}
+                    <PolicySection title="Privacy Policy" effectiveDate="October 8, 2025">
+                        <p>Welcome to {companyInfo.name}. This Privacy Policy explains how we collect, use, and protect your personal information when you use our mobile application to buy, sell, and order sand.</p>
+                        
+                        <PolicyPoint title="1. Information We Collect">
+                            <p>We collect information such as your name, phone number, email address, and location when you register or make a transaction.</p>
+                        </PolicyPoint>
 
-                    <article className="prose prose-lg max-w-none">
-                        <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
-                        <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
+                        <PolicyPoint title="2. How We Use Your Information">
+                            <p>We use your information to process transactions, improve user experience, and ensure platform security.</p>
+                        </PolicyPoint>
 
-                        <Section title="Interpretation and Definitions">
-                            <SubSection title="Interpretation">
-                                <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
-                            </SubSection>
-                            <SubSection title="Definitions">
-                                <p>For the purposes of this Privacy Policy:</p>
-                                <ul className="list-disc pl-6 space-y-2">
-                                    <li><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</li>
-                                    <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to {COMPANY_INFORMATION}.</li>
-                                    <li><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.</li>
-                                    <li><strong>Country</strong> refers to: {COMPANY_COUNTRY}.</li>
-                                    <li><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
-                                    <li><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</li>
-                                    <li><strong>Service</strong> refers to the Website.</li>
-                                    <li><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company.</li>
-                                    <li><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</li>
-                                    <li><strong>Website</strong> refers to {WEBSITE_NAME}, accessible from <a href={WEBSITE_URL} className="text-blue-600 hover:underline">{WEBSITE_URL}</a></li>
-                                    <li><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
-                                </ul>
-                            </SubSection>
-                        </Section>
+                        <PolicyPoint title="3. Sharing of Information">
+                            <p>We do not sell your data. Information is only shared with logistics partners, payment processors, and legal authorities if required.</p>
+                        </PolicyPoint>
 
-                        <Section title="Collecting and Using Your Personal Data">
-                            <SubSection title="Types of Data Collected">
-                                <h4>Personal Data</h4>
-                                <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
-                                <ul className="list-disc pl-6">
-                                    <li>Email address</li>
-                                    <li>First name and last name</li>
-                                    <li>Phone number</li>
-                                    <li>Address, State, Province, ZIP/Postal code, City</li>
-                                </ul>
-                                <h4>Usage Data</h4>
-                                <p>Usage Data is collected automatically when using the Service.</p>
-                                <p>Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
-                            </SubSection>
+                        <PolicyPoint title="4. Data Security">
+                            <p>We implement strict security measures to protect your personal data from unauthorized access or misuse.</p>
+                        </PolicyPoint>
 
-                            <SubSection title="Use of Your Personal Data">
-                                <p>The Company may use Personal Data for the following purposes:</p>
-                                <ul className="list-disc pl-6 space-y-2">
-                                    <li><strong>To provide and maintain our Service</strong>, including to monitor the usage of our Service.</li>
-                                    <li><strong>To manage Your Account:</strong> to manage Your registration as a user of the Service.</li>
-                                    <li><strong>For the performance of a contract:</strong> the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased.</li>
-                                    <li><strong>To contact You:</strong> To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication.</li>
-                                    <li><strong>To provide You</strong> with news, special offers and general information about other goods, services and events which we offer.</li>
-                                    <li><strong>To manage Your requests:</strong> To attend and manage Your requests to Us.</li>
-                                    <li><strong>For business transfers:</strong> We may use Your information to evaluate or conduct a merger, divestiture, or other sale or transfer of some or all of Our assets.</li>
-                                </ul>
-                            </SubSection>
+                        <PolicyPoint title="5. Your Rights">
+                            <p>You can request to access, update, or delete your personal data anytime.</p>
+                        </PolicyPoint>
 
-                            <SubSection title="Retention of Your Personal Data">
-                                <p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our legal agreements and policies.</p>
-                            </SubSection>
+                        <PolicyPoint title="6. Contact Us">
+                            <p>
+                                Email: <a href={`mailto:${companyInfo.email}`} className="text-blue-600 hover:underline">{companyInfo.email}</a> | 
+                                Phone: <a href={`tel:${companyInfo.phone}`} className="text-blue-600 hover:underline">{companyInfo.displayPhone}</a> | 
+                                {` ${companyInfo.address}`}
+                            </p>
+                        </PolicyPoint>
+                    </PolicySection>
 
-                            <SubSection title="Transfer of Your Personal Data">
-                                <p>Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.</p>
-                            </SubSection>
+                    {/* --- Terms & Conditions Section --- */}
+                    <PolicySection title="Terms & Conditions" effectiveDate="October 8, 2025">
+                        <PolicyPoint title="1. Introduction">
+                            <p>These Terms govern your use of the {companyInfo.name} mobile app that enables users to buy, sell, and order sand.</p>
+                        </PolicyPoint>
 
-                            <SubSection title="Disclosure of Your Personal Data">
-                                <p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to: Comply with a legal obligation, protect and defend the rights or property of the Company, prevent or investigate possible wrongdoing in connection with the Service, protect the personal safety of Users of the Service or the public, or protect against legal liability.</p>
-                            </SubSection>
+                        <PolicyPoint title="2. Account Registration">
+                            <p>You must provide accurate and complete information. You are responsible for maintaining your account credentials.</p>
+                        </PolicyPoint>
 
-                            <SubSection title="Security of Your Personal Data">
-                                <p>The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
-                            </SubSection>
-                        </Section>
+                        <PolicyPoint title="3. Orders and Payments">
+                            <p>Payments can be made via cash on delivery or digital channels. Refunds are processed within 7–10 business days for valid claims.</p>
+                        </PolicyPoint>
 
-                        <Section title="Children's Privacy">
-                            <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us.</p>
-                        </Section>
+                        <PolicyPoint title="4. Sellers’ Responsibilities">
+                            <p>Sellers must ensure that their listings are accurate and that products meet quality standards.</p>
+                        </PolicyPoint>
 
-                        <Section title="Links to Other Websites">
-                            <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.</p>
-                        </Section>
+                        <PolicyPoint title="5. Limitation of Liability">
+                            <p>{companyInfo.name} is not responsible for delivery delays or product defects caused by third-party providers.</p>
+                        </PolicyPoint>
 
-                        <Section title="Changes to this Privacy Policy">
-                            <p>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
-                            <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
-                        </Section>
+                        <PolicyPoint title="6. Governing Law">
+                            <p>These Terms are governed by {companyInfo.governingLaw}.</p>
+                        </PolicyPoint>
+                    </PolicySection>
 
-                        <Section title="Contact Us">
-                            <p>If you have any questions about this Privacy Policy, You can contact us:</p>
-                            <ul className="list-disc pl-6">
-                                <li>By email: <a href={`mailto:${WEBSITE_CONTACT_EMAIL}`} className="text-blue-600 hover:underline">{WEBSITE_CONTACT_EMAIL}</a></li>
-                                <li>By visiting this page on our website: <a href={WEBSITE_CONTACT_PAGE_URL} className="text-blue-600 hover:underline">{WEBSITE_CONTACT_PAGE_URL}</a></li>
-                            </ul>
-                        </Section>
-                    </article>
                 </div>
             </main>
             <Footer />

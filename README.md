@@ -98,7 +98,7 @@ You can deploy GI Technology’s website using:
 ## 📞 Contact – GI Technology
 For inquiries and orders:  
 - **Phone:** +251911711111
-- **Email:** Gizzetechnology21@gmail.com  
+- **Email:** gizzetechnology21@gmail.com  
 - **Office Address:** [office location]  
 
 ---

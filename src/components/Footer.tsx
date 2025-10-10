@@ -67,11 +67,11 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-primary-foreground/80">
                 <Phone className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>+251911711111</span>
+                <span>+251 911 711 111</span>
               </li>
               <li className="flex items-start gap-2 text-sm text-primary-foreground/80">
                 <Mail className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>Gizzetechnology21@gmail.com</span>
+                <span>gizzetechnology21@gmail.com</span>
               </li>
               <li className="text-sm text-primary-foreground/80 font-medium mt-4">
                 Open: Monday - Sunday
