@@ -61,7 +61,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact Info */}  
           <div>
             <h4 className="font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-3">

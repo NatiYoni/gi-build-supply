@@ -41,10 +41,12 @@ const About = () => {
             Building Excellence Since Day One
           </p>
         </div>
-        <div className="mt-8 flex items-center gap-3 text-white mx-auto justify-center ">
-          <Phone className="h-5 w-5 text-white" />
-          <span className="text-lg"> <strong>+251-911-711-111</strong></span>
-        </div>
+        <div className="mt-8 flex items-center justify-center gap-3 text-white">
+            <Phone className="h-5 w-5" />
+            <a href="tel:+251911711111" className="text-lg font-semibold hover:underline">
+              +251 911 711 111
+            </a>
+          </div>
       </section>
 
       {/* Company Story */}
