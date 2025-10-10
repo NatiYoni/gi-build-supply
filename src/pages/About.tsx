@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Eye, Users, TrendingUp } from "lucide-react";
+import { Target, Eye, Users, TrendingUp, Phone } from "lucide-react";
 // import logo from "@/assets/logo.jpg";
 import logobgrem from "@/assets/logobgrem.png";
 
@@ -34,12 +34,16 @@ const About = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="gradient-hero text-white py-20">
+      <section className="gradient-hero text-white py-20 flex flex-col ">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-white mb-6">About GI Technology</h1>
           <p className="text-xl max-w-3xl mx-auto text-white/90">
             Building Excellence Since Day One
           </p>
+        </div>
+        <div className="mt-8 flex items-center gap-3 text-white mx-auto justify-center ">
+          <Phone className="h-5 w-5 text-white" />
+          <span className="text-lg"> <strong>+251-911-711-111</strong></span>
         </div>
       </section>
 
@@ -51,31 +55,31 @@ const About = () => {
               <h2 className="mb-6">Our Story</h2>
               <div className="space-y-4 text-muted-foreground text-lg">
                 <p>
-                  GI Technology was founded with a simple mission: to provide the construction 
-                  industry with the highest quality materials and most reliable service available. 
-                  What started as a small operation has grown into a trusted partner for contractors 
+                  GI Technology was founded with a simple mission: to provide the construction
+                  industry with the highest quality materials and most reliable service available.
+                  What started as a small operation has grown into a trusted partner for contractors
                   and builders across the region.
                 </p>
                 <p>
-                  We understand that every construction project, whether big or small, requires 
-                  materials you can depend on. That's why we've built our reputation on quality, 
+                  We understand that every construction project, whether big or small, requires
+                  materials you can depend on. That's why we've built our reputation on quality,
                   reliability, and customer service that goes above and beyond.
                 </p>
                 <p>
-                  Today, GI Technology stands as a leader in construction material supply, 
-                  offering everything from premium sand and gravel to complete building supplies. 
-                  Our commitment to excellence remains unchanged, and we continue to grow alongside 
+                  Today, GI Technology stands as a leader in construction material supply,
+                  offering everything from premium sand and gravel to complete building supplies.
+                  Our commitment to excellence remains unchanged, and we continue to grow alongside
                   our customers' success.
                 </p>
               </div>
             </div>
-            
+
             <div className="flex items-center justify-center">
               <div className="relative">
                 <div className="absolute inset-0 gradient-primary blur-3xl opacity-30 rounded-full"></div>
-                <img 
-                  src={logobgrem} 
-                  alt="GI Technology Logo" 
+                <img
+                  src={logobgrem}
+                  alt="GI Technology Logo"
                   className="relative h-80 w-80 object-contain"
                 />
               </div>
@@ -95,8 +99,8 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
                 <p className="text-muted-foreground text-lg">
-                  To deliver premium construction materials with unmatched service, helping our 
-                  customers build stronger, better, and more efficiently. We strive to be the 
+                  To deliver premium construction materials with unmatched service, helping our
+                  customers build stronger, better, and more efficiently. We strive to be the
                   first choice for contractors and builders who demand quality and reliability.
                 </p>
               </CardContent>
@@ -109,8 +113,8 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
                 <p className="text-muted-foreground text-lg">
-                  To be the most trusted and respected construction materials supplier in the 
-                  industry, known for our unwavering commitment to quality, innovation, and 
+                  To be the most trusted and respected construction materials supplier in the
+                  industry, known for our unwavering commitment to quality, innovation, and
                   customer satisfaction. We aim to set the standard for excellence.
                 </p>
               </CardContent>
@@ -153,13 +157,13 @@ const About = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="mb-6">Our Team</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-            Behind GI Technology is a dedicated team of professionals committed to your success. 
-            From our experienced sales staff to our skilled logistics team, every member plays a 
+            Behind GI Technology is a dedicated team of professionals committed to your success.
+            From our experienced sales staff to our skilled logistics team, every member plays a
             crucial role in delivering the quality and service you deserve.
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            We invest in our people because we know that great service comes from a team that 
-            cares. Our staff undergoes continuous training to stay current with industry trends 
+            We invest in our people because we know that great service comes from a team that
+            cares. Our staff undergoes continuous training to stay current with industry trends
             and best practices, ensuring we can provide you with expert guidance and support.
           </p>
         </div>

@@ -17,7 +17,7 @@ import loaderSand from "@/assets/loader-sand.jpg";
 import excavatorQuarry from "@/assets/excavator-quarry.jpg";
 import excavatorWork from "@/assets/excavator-work.jpg";
 import excavatorSunset from "@/assets/excavator-sunset.jpg";
-import { CheckCircle, ArrowRight, Clock } from "lucide-react";
+import { CheckCircle, ArrowRight, Clock, Phone } from "lucide-react";
 
 const Services = () => {
   const services = [
@@ -80,12 +80,16 @@ const Services = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="gradient-hero text-white py-20">
+      <section className="gradient-hero text-white py-20 flex flex-col ">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-white mb-6">Our Products & Services</h1>
           <p className="text-xl max-w-3xl mx-auto text-white/90">
             Comprehensive range of premium construction materials delivered with excellence and reliability
           </p>
+        </div>
+        <div className="mt-8 flex items-center gap-3 text-white mx-auto justify-center ">
+          <Phone className="h-5 w-5 text-white" />
+          <span className="text-lg"> <strong>+251-911-711-111</strong></span>
         </div>
       </section>
 
@@ -94,17 +98,16 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="space-y-16">
             {services.map((service, index) => (
-              <div 
-                key={index} 
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-start ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
+              <div
+                key={index}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-start ${index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                  }`}
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                   {service.images.length === 1 ? (
                     <div className="relative h-96 rounded-lg overflow-hidden shadow-card group">
-                      <img 
-                        src={service.images[0]} 
+                      <img
+                        src={service.images[0]}
                         alt={service.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
@@ -123,18 +126,15 @@ const Services = () => {
                   ) : (
                     <div className="grid grid-cols-2 gap-4">
                       {service.images.map((image, imgIndex) => (
-                        <div 
-                          key={imgIndex} 
-                          className={`relative rounded-lg overflow-hidden shadow-card group ${
-                            imgIndex === 0 && service.images.length === 3 ? "col-span-2 h-64" : "h-48"
-                          } ${
-                            service.images.length === 4 ? "h-44" : ""
-                          } ${
-                            service.images.length === 5 && imgIndex === 0 ? "col-span-2 h-64" : ""
-                          }`}
+                        <div
+                          key={imgIndex}
+                          className={`relative rounded-lg overflow-hidden shadow-card group ${imgIndex === 0 && service.images.length === 3 ? "col-span-2 h-64" : "h-48"
+                            } ${service.images.length === 4 ? "h-44" : ""
+                            } ${service.images.length === 5 && imgIndex === 0 ? "col-span-2 h-64" : ""
+                            }`}
                         >
-                          <img 
-                            src={image} 
+                          <img
+                            src={image}
                             alt={`${service.title} ${imgIndex + 1}`}
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                           />
@@ -154,7 +154,7 @@ const Services = () => {
                     </div>
                   )}
                 </div>
-                
+
                 <Card className={`shadow-card ${index % 2 === 1 ? "lg:order-1" : ""}`}>
                   <CardHeader>
                     <div className="flex items-center justify-between">
@@ -169,7 +169,7 @@ const Services = () => {
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <p className="text-muted-foreground text-lg">{service.description}</p>
-                    
+
                     <ul className="space-y-3">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start gap-3">
@@ -180,7 +180,7 @@ const Services = () => {
                     </ul>
 
                     <Link to="/contact">
-                      <Button 
+                      <Button
                         className="gradient-hero text-white shadow-glow mt-4"
                         disabled={service.comingSoon}
                       >
@@ -206,37 +206,37 @@ const Services = () => {
                 <CardContent className="pt-6">
                   <h3 className="text-xl font-bold mb-3">Quality Assurance</h3>
                   <p className="text-muted-foreground">
-                    All our materials undergo rigorous quality testing to ensure they meet 
+                    All our materials undergo rigorous quality testing to ensure they meet
                     industry standards and exceed your expectations.
                   </p>
                 </CardContent>
               </Card>
-              
+
               <Card className="shadow-card">
                 <CardContent className="pt-6">
                   <h3 className="text-xl font-bold mb-3">Competitive Pricing</h3>
                   <p className="text-muted-foreground">
-                    We offer the best prices in the market without compromising on quality. 
+                    We offer the best prices in the market without compromising on quality.
                     Bulk discounts available for large orders.
                   </p>
                 </CardContent>
               </Card>
-              
+
               <Card className="shadow-card">
                 <CardContent className="pt-6">
                   <h3 className="text-xl font-bold mb-3">Reliable Delivery</h3>
                   <p className="text-muted-foreground">
-                    Our fleet ensures timely delivery to your site. We understand the importance 
+                    Our fleet ensures timely delivery to your site. We understand the importance
                     of keeping your project on schedule.
                   </p>
                 </CardContent>
               </Card>
-              
+
               <Card className="shadow-card">
                 <CardContent className="pt-6">
                   <h3 className="text-xl font-bold mb-3">Expert Support</h3>
                   <p className="text-muted-foreground">
-                    Our team of experienced professionals is always ready to help you choose 
+                    Our team of experienced professionals is always ready to help you choose
                     the right materials for your specific needs.
                   </p>
                 </CardContent>
