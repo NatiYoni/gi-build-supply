@@ -137,7 +137,10 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Phone</h3>
-                        <p className="text-muted-foreground">+251911711111</p>
+                        {/* <p className="text-muted-foreground">+251911711111</p> */}
+                        <a href="tel:+251911711111" className="text-muted-foreground hover:text-blue-600 hover:underline">
+                          +251 911 711 111
+                        </a>
                       </div>
                     </div>
 
@@ -147,7 +150,9 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Email</h3>
-                        <p className="text-muted-foreground">gizzetechnology21@gmail.com</p>
+                          <a href="mailto:gizzetechnology21@gmail.com" className="text-muted-foreground hover:text-blue-600 hover:underline break-all">
+                            gizzetechnology21@gmail.com
+                          </a>                      
                       </div>
                     </div>
 
@@ -186,9 +191,12 @@ const Contact = () => {
                   <p className="text-white/90 mb-4">
                     For urgent inquiries or emergency orders, call our 24/7 hotline.
                   </p>
-                  <Button variant="outline" className="w-full text-white border-white bg-white/10">
-                    Call Now: +251911711111
-                  </Button>
+                  <a href="tel:+251911711111">
+                    <Button variant="outline" className="w-full text-white border-white bg-white/10">
+                      Call Now: +251911711111
+                    </Button>
+                  </a>
+                  
                 </CardContent>
               </Card>
             </div>
