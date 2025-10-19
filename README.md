@@ -35,13 +35,6 @@ This website is being developed to represent the company’s products and servic
 
 ---
 
-## 👨‍💻 Developers
-This project is being developed by:  
-- **Natnael Yonas**  
-- **Milkias Hailu**  
-
----
-
 ## ⚡ Website Features
 - 🏠 **Homepage** – Highlights our company vision and services  
 - 📦 **Products Page** – Browse available construction materials (sand, gravel, aggregates, etc.)  
