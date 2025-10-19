@@ -1,5 +1,7 @@
 # 🏗️ GI Technology – Construction Materials & Machinery
 
+**Live Website:** [**https://gi-build-supply.vercel.app/**](https://gi-build-supply.vercel.app/)
+
 ## 🌐 Project Info
 **GI Technology** is a trusted supplier of **construction materials** such as **sand, gravel, and aggregates**.  
 We are also expanding into **construction machinery and heavy equipment**, making us a one-stop solution for builders, contractors, and individuals.  
