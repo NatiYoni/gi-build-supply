@@ -181,15 +181,19 @@ const Services = () => {
                       ))}
                     </ul>
 
-                    <Link to="/contact">
-                      <Button
-                        className="gradient-hero text-white shadow-glow mt-4"
-                        disabled={service.comingSoon}
-                      >
-                        {service.comingSoon ? "Notify Me" : "Request Quote"}
+                    {service.comingSoon ? (
+                      <Button className="gradient-hero text-white shadow-glow mt-4" disabled>
+                        Notify Me
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
-                    </Link>
+                    ) : (
+                      <Button asChild className="gradient-hero text-white shadow-glow mt-4">
+                        <Link to="/contact">
+                          Request Quote
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    )}
                   </CardContent>
                 </Card>
               </div>

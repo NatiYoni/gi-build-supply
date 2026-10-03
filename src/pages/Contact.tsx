@@ -20,8 +20,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you for your message! We'll get back to you soon.");
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+    toast.error("Message not sent. Please use the email or phone links on this page.");
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -53,7 +52,10 @@ const Contact = () => {
                   <CardTitle className="text-3xl">Send Us a Message</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <p id="contact-form-note" className="mb-6 text-sm text-muted-foreground">
+                    Online message delivery is not connected. Please use the email or phone links on this page to request a quote.
+                  </p>
+                  <form onSubmit={handleSubmit} aria-describedby="contact-form-note" className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="name">Full Name</Label>
@@ -118,7 +120,7 @@ const Contact = () => {
                       />
                     </div>
 
-                    <Button type="submit" className="gradient-hero text-white shadow-glow w-full md:w-auto">
+                    <Button type="submit" aria-describedby="contact-form-note" className="gradient-hero text-white shadow-glow w-full md:w-auto">
                       Send Message
                     </Button>
                   </form>
@@ -191,11 +193,11 @@ const Contact = () => {
                   <p className="text-white/90 mb-4">
                     For urgent inquiries or emergency orders, call our 24/7 hotline.
                   </p>
-                  <a href="tel:+251911711111">
-                    <Button variant="outline" className="w-full text-white border-white bg-white/10">
+                  <Button asChild variant="outline" className="w-full text-white border-white bg-white/10">
+                    <a href="tel:+251911711111">
                       Call Now: +251911711111
-                    </Button>
-                  </a>
+                    </a>
+                  </Button>
                   
                 </CardContent>
               </Card>
