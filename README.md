@@ -22,53 +22,31 @@ This website is being developed to represent the company’s products and servic
 ---
 
 ## 🚀 Getting Started (Development)
-To run the project locally:
-# 🏗️ GI Technology – Construction Materials & Machinery
-
-## 🌐 Project Info
-**GI Technology** is a trusted supplier of **construction materials** such as **sand, gravel, and aggregates**.  
-We are also expanding into **construction machinery and heavy equipment**, making us a one-stop solution for builders, contractors, and individuals.  
-
-Our mission is to deliver **reliable, high-quality, and affordable materials** that power successful construction projects.  
-
-This website is being developed to represent the company’s products and services online.
-
----
-
-## ⚡ Website Features
-- 🏠 **Homepage** – Highlights our company vision and services  
-- 📦 **Products Page** – Browse available construction materials (sand, gravel, aggregates, etc.)  
-- 🛠️ **Machinery Section** – Coming soon: heavy equipment and tools  
-- 📞 **Contact Page** – Easy access to quotes and customer support  
-- 📱 **Responsive Design** – Optimized for mobile and desktop  
-
----
-
-## 🚀 Getting Started (Development)
-To run the project locally:
+Use Node.js 22 or 24 and npm with the checked-in `package-lock.json`.
 
 ```sh
-# Step 1: Clone the repository
-git clone <YOUR_REPO_URL>
-# Step 1: Clone the repository
-git clone <YOUR_REPO_URL>
-
-# Step 2: Navigate into the project directory
-# Step 2: Navigate into the project directory
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install dependencies
-npm install
-# Step 3: Install dependencies
-npm install
-
-# Step 4: Start the development server
-# Step 4: Start the development server
-npm run dev
+git clone https://github.com/NatiYoni/gi-build-supply.git
+cd gi-build-supply
+npm ci
+npm run dev -- --host 127.0.0.1 --port 3012 --strictPort
 ```
 
-Your site will be available at:  
-👉 `http://localhost:5173/` (default for Vite)  
+Open `http://127.0.0.1:3012/`. No environment file or credentials are required.
+Products are listed at `/services`; quote links lead to `/contact`.
+
+## Local Browser Evidence
+See the [website journey evidence guide](docs/website-evidence.md) for reproducible
+desktop/mobile checks, a local screenshot, and the limits of this evidence.
+
+```sh
+# Stop the development server first; the checks own port 3012.
+npx --no-install playwright install chromium --only-shell
+npm run test:browser
+```
+
+The contact form has no delivery backend. It now reports that limitation and keeps
+entered text; use the existing email or phone links for an actual inquiry. The
+checks do not activate those links or contact live services.
 
 ---
 

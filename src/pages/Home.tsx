@@ -76,17 +76,15 @@ const Home = () => {
                 to power your building projects.
               </p>
               <div className="flex flex-wrap gap-4 justify-start">
-                <Link to="/services">
-                  <Button size="lg" className="gradient-hero text-white shadow-glow text-lg px-8 py-6">
+                <Button asChild size="lg" className="gradient-hero text-white shadow-glow text-lg px-8 py-6">
+                  <Link to="/services">
                     Explore Products
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-                <Link to="/contact">
-                  <Button size="lg" variant="outline" className="text-lg px-8 py-6">
-                    Get a Quote
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="text-lg px-8 py-6">
+                  <Link to="/contact">Get a Quote</Link>
+                </Button>
               </div>
               <div className="mt-8 flex items-center gap-3 text-slate-700">
                 <Phone className="h-5 w-5 text-primary" />
@@ -120,17 +118,15 @@ const Home = () => {
                 Top-quality sand, stones, and aggregates for your projects.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-sm">
-                <Link to="/services" className="w-full">
-                  <Button size="lg" className="w-full gradient-hero text-white shadow-glow">
+                <Button asChild size="lg" className="w-full gradient-hero text-white shadow-glow">
+                  <Link to="/services">
                     Explore Products
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-                <Link to="/contact" className="w-full">
-                  <Button size="lg" variant="outline" className="w-full bg-white/10 border-white hover:bg-white/20">
-                    Get a Quote
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="w-full bg-white/10 border-white hover:bg-white/20">
+                  <Link to="/contact">Get a Quote</Link>
+                </Button>
               </div>
               <div className="mt-8 flex items-center gap-3 gradient-hero p-1.5 rounded-md">
                 <Phone className="h-5 w-5 text-white" />
@@ -210,12 +206,12 @@ const Home = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Link to="/services">
-              <Button size="lg" className="gradient-hero text-white shadow-glow">
+            <Button asChild size="lg" className="gradient-hero text-white shadow-glow">
+              <Link to="/services">
                 View All Products
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -227,12 +223,12 @@ const Home = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
             Contact us today for a free quote and discover how GI Technology can help bring your construction vision to life.
           </p>
-          <Link to="/contact">
-            <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-white/90 border-white text-lg px-8 py-6">
+          <Button asChild size="lg" variant="outline" className="bg-white text-primary hover:bg-white/90 border-white text-lg px-8 py-6">
+            <Link to="/contact">
               Contact Us Today
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </section>
 
